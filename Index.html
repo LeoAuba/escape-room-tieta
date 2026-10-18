@@ -1,0 +1,31 @@
+
+<div style="background:#101010;color:white;padding:30px;text-align:center;font-family:Arial;border-radius:12px">
+  <h2>🔐 Acceso restringido</h2>
+  <p>Introduce el código secreto.</p>
+
+  <input id="clave" type="text"
+    placeholder="Código de acceso"
+    style="padding:12px;width:180px;text-align:center">
+
+  <button onclick="comprobar()"
+    style="padding:12px;cursor:pointer">
+    Desbloquear
+  </button>
+
+  <p id="mensaje"></p>
+</div>
+
+<script>
+function comprobar() {
+  const codigo = document.getElementById("clave")
+    .value.trim().toUpperCase();
+
+  if (codigo === "M20A4") {
+    window.location.href =
+      "https://sites.google.com/view/misterio-misterioso/prueba-2";
+  } else {
+    window.location.href =
+      "https://sites.google.com/view/misterio-misterioso/respuesta-incorrecta";
+  }
+}
+</script>
